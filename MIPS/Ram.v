@@ -1,4 +1,3 @@
-
 module Ram	(input			clk, mem_read, mem_write,
 		 input		[31:0]	addr,
 		 input		[31:0]	i_data,
@@ -6,7 +5,7 @@ module Ram	(input			clk, mem_read, mem_write,
 
 		 reg [31:0]	mem	[0:31];
 
-	//initial $readmemb ("ram_init.dat", mem);
+	initial $readmemb ("ram_init.dat", mem);
 
 	always @(posedge clk)
 		if (mem_write)

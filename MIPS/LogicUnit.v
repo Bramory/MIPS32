@@ -1,5 +1,3 @@
-`timescale 1ns / 1ps
-
 module LogicUnit	(input 		[31:0]	A, B,
 			 input 		[1:0]	LO,
 			 output reg	[31:0]	Result);

@@ -1,4 +1,3 @@
-
 module mux2in1	(input		[31:0]	i_dat0, i_dat1, 
 		 input			control,
 		 output	reg	[31:0]	o_dat);

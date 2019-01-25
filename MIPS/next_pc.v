@@ -1,4 +1,3 @@
-
 module next_pc	(input	[31:0]	inc_pc,
 				 input	[25:0]	imm26,
 				 input		zero, beq, bne, j,

@@ -15,7 +15,5 @@ Rom Rom_1 (.addr(addr), .data(data));
 		forever #(period)
 			for (i = 0; i <= 256; i = i + 1)
 				#5 addr <= i;
-
 	initial #300 $stop;
-
 endmodule

@@ -1,5 +1,10 @@
-`timescale 1ns / 1ps
+//mb without functions 'cause we have non 
+// use logical shift and "signed" for mathematical shift 
 
+// Data - number for shifting
+// SRO
+// SA - Shift Amount (example "<< 1" the same like "*2"  )
+// already shifted number
 module Shifter	(input		[31:0]	Data,
 		 input		[1:0]	SRO,
 		 input		[4:0]	SA,
@@ -15,7 +20,7 @@ module Shifter	(input		[31:0]	Data,
 Extender Shifter (.SRO(SRO), .Data(Data), .Result(Result1));
 
 	always @(*) begin
-		SAsll = {5{(~(SRO[1:1] | SRO[0:0]))}} ^ SA;
+		SAsll = {5{(~(SRO[1:1] | SRO[0:0]))}} ^ SA; // XOR like invertor
 		
 		in1 = SAsll[4] ? Result1[62:16] : Result1[46:0];
 

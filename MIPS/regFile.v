@@ -15,7 +15,7 @@ module regFile	(input	   	        clk, i_we, reset_n,
 		address [i_waddr] <= 1;
 	end
 
-				//initial $readmemh("regi.dat", mem);
+				initial $readmemh("regi.dat", mem);
 
 	assign WE = address & {32{i_we}};
 		 
